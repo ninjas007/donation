@@ -13,4 +13,10 @@ class Slider extends Model
         'image',
         'link'
     ];
+
+    //UNTUK GET IMAGE SLIDER
+
+    public function getImageAttribute($image) {
+        return asset('storage/sliders/'.$image);
+    }
 }

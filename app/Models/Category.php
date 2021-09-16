@@ -14,4 +14,14 @@ class Category extends Model
         'slug',
         'image'
     ];
+
+    public function campaigns() {
+        return $this->hasMany(Campaign::class);
+    }
+
+    //UNTUK GET IMAGE
+
+    public function getImageAttribute($image) {
+        return asset('storage/categories/'.$image);
+    }
 }

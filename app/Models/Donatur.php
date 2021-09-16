@@ -20,4 +20,18 @@ class Donatur extends Model
         'password',
         'remember_token'
     ];
+
+    public function donations() {
+        return $this->hasMany(Donation::class);
+    }
+
+    //UNTUK MENGUBAH AVA MENJADI NAMA USER
+
+    public function getAvatarAttribute($avatar) {
+        if ($avatar != null) {
+            return asset('storage/donaturs/'.$avatar);
+        } else {
+            return 'https://ui-avatars.com/api/?name=' . str_replace(' ', '+', $this->name) . '&background=4e73df&color=ffffff&size=100';
+        }
+    }
 }

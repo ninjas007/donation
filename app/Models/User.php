@@ -32,6 +32,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'two_factor_secret',
+        'two_factor_recovery_codes',
     ];
 
     /**
@@ -42,4 +44,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function campaigns() {
+        return $this->hasMany(Campaign::class);
+    }
+
+    //ACCESSOR UNTUK GET AVATAR USER PAKAI UI-AVATAR
+
+    public function getAvatarAttribute($avatar) {
+        if ($avatar != null) {
+            return asset('storage/users/'.$avatar);
+        } else {
+            return 'https://ui-avatars.com/api?name=' . str_replace(' ', '+', $this->name) . '&background=4e73df&color=ffffff&size=100';
+        }
+    }
 }

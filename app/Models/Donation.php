@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,4 +19,23 @@ class Donation extends Model
         'snap_token',
         'status'
     ];
+
+    public function campaigns() {
+        return $this->belongsTo(Campaign::class);
+    }
+
+    public function donaturs() {
+        return $this->belongsTo(Donatur::class);
+    }
+
+    //UNTUK MENGUBAH FORMAT TANGGAL
+
+    public function getCreatedAtAttribute($date) {
+        return Carbon::parse($date)->format('d-M-Y');
+    }
+
+    public function getUpdatedAtAttribute($date) {
+        return Carbon::parse($date)->format('d-M-Y');
+    }
+
 }
