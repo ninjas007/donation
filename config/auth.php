@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'api' => [
+            'driver' => 'passport', // <-- set ke "passport"
+            'provider' => 'donaturs', // <-- set ke "donaturs"
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -63,6 +68,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'donaturs' => [ // <-- nama provider "donaturs"
+             'driver' => 'eloquent', // <-- driver "eloquent"
+             'model' => AppModelsDonatur::class, // <-- model
+            'app/Models/Donatur.php'
         ],
 
         // 'users' => [
