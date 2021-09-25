@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Donatur extends Authenticatable // ubah extends class ke authnya
+// ubah extends class ke authnya.
+// kenapa? karena donation itu adalah user juga
+class Donatur extends Authenticatable
 {
     use HasFactory;
     use HasApiTokens;
