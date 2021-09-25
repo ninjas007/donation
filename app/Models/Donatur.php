@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Passport\HasApiTokens;
-use IlluminateFoundationAuthUser as Authenticatable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class Donatur extends Authenticatable // ubah extends class ke authnya
 {
