@@ -24,3 +24,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
  */
 Route::post('/register', [RegisterController::class, 'register']);
 Route::post('/login', [LoginController::class, 'login']);
+
+/**
+ * APi Category
+ */
+Route::get('/category', [CategoryController::class, 'index']);
+Route::get('/category/{slug}', [CategoryController::class, 'show']);
+Route::get('/categoryHome', [CategoryController::class, 'categoryHome']);
