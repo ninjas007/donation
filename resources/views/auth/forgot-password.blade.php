@@ -4,7 +4,7 @@
 <div class="flex justify-center items-center h-screen bg-gray-300 px-6">
     <div class="p-6 max-w-sm w-full bg-white shadow-md rounded-md">
         <div class="flex justify-center items-center">
-            <span class="text-gray-700 font-semibold text-2x1">RESET PASSWORD</span>
+            <span class="text-gray-700 font-semibold text-2xl">RESET PASSWORD</span>
         </div>
         @if (session('status'))
         <div class="bg-green-500 p-3 rounded-md shadow-sm mt-3">

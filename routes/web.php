@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
+});
+
+// FOR ADMIN
+
+
+//GROUP ROUTE WITH PREFIX "ADMIN"
+Route::prefix('admin')->group(function() {
+
+    //GROUP ROUTE WITH MIDDLEWARE "AUTH"
+    Route::group(['middleware' => 'auth'], function() {
+
+        //ROUTE DASHBOARD
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard.index');
+        Route::resource('/category', CategoryController::class,['as' => 'admin']);
+    });
 });
