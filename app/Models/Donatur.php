@@ -4,10 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Passport\HasApiTokens;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Donatur extends Model
+// ubah extends class ke authnya.
+// kenapa? karena donation itu adalah user juga
+class Donatur extends Authenticatable
 {
     use HasFactory;
+    use HasApiTokens;
 
     protected $fillable = [
         'name',
