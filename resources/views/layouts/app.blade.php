@@ -68,7 +68,7 @@
                     <span class="mx-3">Kategori</span>
                 </a>
 
-                <a href="#"
+                <a href="{{ route('admin.campaign.index') }}"
                     class="flex items-center mt-4 py-2 px-6 hover:bg-gray-700 bg-opacity-25 hover:text-gray-100 {{ Request::is('admin/campaign*') ? 'bg-gray-700 bg-opacity-25 text-gray-100' : 'text-gray-500' }}">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="https://www.w2.org/2000/svg">

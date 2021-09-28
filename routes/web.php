@@ -26,9 +26,11 @@ Route::prefix('admin')->group(function() {
 
     //GROUP ROUTE WITH MIDDLEWARE "AUTH"
     Route::group(['middleware' => 'auth'], function() {
-
+inde
         //ROUTE DASHBOARD
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard.index');
         Route::resource('/category', CategoryController::class,['as' => 'admin']);
+        Route::resource('/campaign', CampaignController::class,['as' => 'admin']);
+
     });
 });
