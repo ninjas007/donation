@@ -63,7 +63,7 @@
                                     {{ $campaign->max_date }}
                                 </td>
                                 <td class="px-10 py-2 text-center">
-                                    <a href="" class="bg-indigo-600 px-4 py-2 rounded shadow-sm text-xs text-white focus:outline-none">Edit</a>
+                                    <a href="{{ route('admin.campaign.edit', $campaign->id) }}" class="bg-indigo-600 px-4 py-2 rounded shadow-sm text-xs text-white focus:outline-none">Edit</a>
                                     <button onclick="destroy(this.id)" id="{{ $campaign->id }}" class="bg-red-600 px-4 py-2 rounded shadow-sm text-xs text-white focus:outline-none">Hapus</button>
                                 </td>
                             </tr>
@@ -86,7 +86,7 @@
 </main>
 <script>
     //AJAX DELETE
-    function deestroy(id) {
+    function destroy(id) {
         id = id;
         let token = $("meta[name='csrf-token']").attr("content");
 

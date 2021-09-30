@@ -20,11 +20,11 @@ class Donation extends Model
         'status'
     ];
 
-    public function campaigns() {
+    public function campaign() {
         return $this->belongsTo(Campaign::class);
     }
 
-    public function donaturs() {
+    public function donatur() {
         return $this->belongsTo(Donatur::class);
     }
 
