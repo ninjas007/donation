@@ -46,7 +46,7 @@ class CampaignController extends Controller
             'target_donation'   => $request->target_donation,
             'max_date'          => $request->max_date,
             'description'       => $request->description,
-            'user_id'           => $request->user_id,
+            'user_id'           => auth()->user()->id,
             'image'             => $image->hashName()
         ]);
 

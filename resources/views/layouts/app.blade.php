@@ -80,7 +80,7 @@
                     <span class="mx-3">Campaigns</span>
                 </a>
 
-                <a href="#"
+                <a href="{{ route('admin.donatur.index') }}"
                     class="flex items-center mt-4 py-2 px-6 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100 {{ Request::is('admin/donatur*') ? 'bg-gray-700 bg-opacity-25 text-gray-100' : 'text-gray-500' }}">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="https://www.w3.org/2000/svg">
@@ -92,7 +92,7 @@
                     <span class="mx-3">Donaturs</span>
                 </a>
 
-                <a href="#"
+                <a href="{{ route('admin.donation.index') }}"
                     class="flex items-center mt-4 py-2 px-6 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100 {{ Request::is('admin/donation*') ? 'bg-gray-700 bg-opacity-25 text-gray-100' : 'text-gray-500' }}">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="https://www.w3.org/2000/svg">
@@ -103,7 +103,7 @@
                     <span class="mx-3">Donations</span>
                 </a>
 
-                <a href="#"
+                <a href="{{ route('admin.profile.index') }}"
                     class="flex items-center mt-4 py-2 px-6 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100 {{ Request::is('admin/profile*') ? 'bg-gray-700 bg-opacity-25 text-gray-100' : 'text-gray-500' }}">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="https://www.w3.org/2000/svg">

@@ -20,11 +20,11 @@ class Campaign extends Model
         'user_id'
     ];
 
-    public function categories() {
+    public function category() {
         return $this->belongsTo(Category::class);
     }
 
-    public function users() {
+    public function user() {
         return $this->belongsTo(User::class);
     }
 
