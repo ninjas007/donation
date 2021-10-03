@@ -37,3 +37,8 @@ Route::get('/categoryHome', [CategoryController::class, 'categoryHome']);
  */
 Route::get('/campaign', [CampaignController::class, 'index']);
 Route::get('/campaign/{slug}', [CampaignController::class, 'show']);
+
+/**
+ * Api Slider
+ */
+Route::get('/slider', [SliderController::class, 'index']);
