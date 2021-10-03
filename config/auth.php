@@ -70,8 +70,8 @@ return [
             'model' => App\Models\User::class,
         ],
         'donaturs' => [ // <-- nama provider "donaturs"
-             'driver' => 'eloquent', // <-- driver "eloquent"
-             'model' => AppModelsDonatur::class, // <-- model
+            'driver' => 'eloquent', // <-- driver "eloquent"
+            'model' => App\Models\Donatur::class, // <-- model
             'app/Models/Donatur.php'
         ],
 
