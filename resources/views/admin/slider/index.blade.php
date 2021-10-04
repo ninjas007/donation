@@ -45,17 +45,17 @@
         </div>
 
         <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-            <div class="inline block min-w-full shadow-sm rouded-lg overflow-hidden">
+            <div class="inline-block min-w-full shadow-sm rounded-lg overflow-hidden">
                 <table class="min-w-full table-auto">
                     <thead class="justify-between">
                         <tr class="bg-gray-600 w-full">
-                            <th class="px-6 py-2">
+                            <th class="px-16 py-2">
                                 <span class="text-white">GAMBAR</span>
                             </th>
-                            <th class="px-6 py-2 text-left">
+                            <th class="px-16 py-2 text-left">
                                 <span class="text-white">LINK PROMO</span>
                             </th>
-                            <th class="px-6 py-2">
+                            <th class="px-16 py-2">
                                 <span class="text-white">AKSI</span>
                             </th>
                         </tr>
@@ -75,7 +75,7 @@
                                 </td>
                             </tr>
                         @empty
-                            <div class="bg-red-500 text-white text-center p-3 rounded-md shadow-md">
+                            <div class="bg-red-500 text-white text-center p-3 rounded-sm shadow-md">
                                 Data Belum Tersedia!
                             </div>
                         @endforelse

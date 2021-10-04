@@ -41,7 +41,7 @@
                             <th class="px-16 py-2 text-left">
                                 <span class="text-white">TANGGAL BERAKHIR</span>
                             </th>
-                            <th class="px16 py-2">
+                            <th class="px-16 py-2">
                                 <span class="text-white">AKSI</span>
                             </th>
                         </tr>
