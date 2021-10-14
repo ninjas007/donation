@@ -20,3 +20,4 @@ class SliderController extends Controller
         return response()->json($response, 200);
     }
 }
+/*Bismillah repo hacktoberfest aamiin */
