@@ -50,3 +50,9 @@ Route::get('/profile', [ProfileController::class, 'index'])->middleware('auth:ap
 Route::post('/profile', [ProfileController::class, 'update'])->middleware('auth:api');
 Route::post('/profile/password', [ProfileController::class, 'updatePassword'])->middleware('auth:api');
 
+/**
+ * Api Donation
+ */
+Route::get('/donation', [DonationController::class, 'index'])->middleware('auth:api');
+Route::post('/donation', [DonationController::class, 'store'])->middleware('auth:api');
+Route::post('/donation/notification', [DonationController::class, 'notificationHandler']);
