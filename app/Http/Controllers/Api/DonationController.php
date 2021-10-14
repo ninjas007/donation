@@ -42,7 +42,7 @@ class DonationController extends Controller
             //ALGORITMA CETAK NO INVOICE
             $panjang = 10;
             $random  = '';
-            for ($i = 0; $i < $panjang; $i++) { 
+            for ($i = 0; $i < $panjang; $i++) {
                 $random .= rand(0,1) ? rand(0,9) : chr(rand(ord('a'), ord('z')));
             }
 

@@ -70,7 +70,7 @@ class ProfileController extends Controller
         if ($validator->fails()) {
             return response()->json($validator->errors(), 400);
         }
-        
+
         $donatur = Donatur::whereId(auth()->guard('api')->user()->id)->first();
         $donatur->update([
             'password'  => Hash::make($request->password)
