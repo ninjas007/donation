@@ -37,7 +37,7 @@
                         @forelse ($donaturs as $donatur)
                             <tr class="border bg-white">
 
-                                <td class="px-5 py-2">{{ $doantur->name }}</td>
+                                <td class="px-5 py-2">{{ $donatur->name }}</td>
 
                                 <td class="px-16 py-2">{{ $donatur->email }}</td>
 

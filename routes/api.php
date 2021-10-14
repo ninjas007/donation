@@ -31,3 +31,37 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::get('/category', [CategoryController::class, 'index']);
 Route::get('/category/{slug}', [CategoryController::class, 'show']);
 Route::get('/categoryHome', [CategoryController::class, 'categoryHome']);
+
+/**
+ * APi Campaign
+ */
+Route::get('/campaign', [CampaignController::class, 'index']);
+Route::get('/campaign/{slug}', [CampaignController::class, 'show']);
+
+/**
+ * APi Slider
+ */
+Route::get('/slider', [SliderController::class, 'index']);
+
+Route::middleware(['auth:api'])->group(function () {
+    /**
+     * APi Profile
+     */
+    Route::get('/profile', [ProfileController::class, 'index']);
+    Route::post('/profile', [ProfileController::class, 'update']);
+    Route::post('/profile/password', [ProfileController::class, 'updatePassword']);
+
+    /**
+     * APi Donation
+     */
+    Route::get('/donation', [DonationController::class, 'index']);
+    Route::post('/donation', [DonationController::class, 'store']);
+});
+
+/**
+ * APi Donation
+ */
+Route::post('/donation/notification', [DonationController::class, 'notificationHandler']);
+
+
+

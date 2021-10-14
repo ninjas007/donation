@@ -40,11 +40,13 @@ class CategoryController extends Controller
 
         if($category) {
             //return with response JSON
-            return response()->json([
-            'success' => true,
-            'message' => 'List Data Campaign Berdasarkan Category : '. $category->name,
-            'data' => $category,
-            ], 200);
+            $response = [
+                'success'   => true,
+                'message'   => 'List Data Campaign Berdasarkan Category : '. $category->name,
+                'data'      => $category
+            ];
+
+            return response()->json($response, 200);
         }
 
         //return with response JSON
@@ -65,10 +67,11 @@ class CategoryController extends Controller
         $categories = Category::latest()->take(3)->get();
 
         //return with response JSON
-        return response()->json([
-        'success' => true,
+        $response = [
+            'success' => true,
             'message' => 'List Data Category Home',
             'data' => $categories,
-        ], 200);
+        ];
+        return response()->json($response, 200);
     }
 }
